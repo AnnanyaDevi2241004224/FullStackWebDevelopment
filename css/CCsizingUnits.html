@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units </title>
+    <style>
+        html{font-size: 12px;}
+        *{font-weight: bold;}
+        .box1
+        {
+            margin:auto;
+            border:2px solid black;
+            width:250px;
+            background-color: greenyellow;
+        }
+        .box2
+        {
+            box-sizing: border-box;
+            border:2px solid black;
+            width:1920px;
+            background-color: aqua;
+        }
+        .box3
+        {
+            box-sizing: border-box;
+            border:2px solid black;
+            width:100vw;
+            background-color: orchid;
+        }
+        .container
+        {
+            box-sizing: border-box;
+            border:2px solid black;
+            width:100vw; height: 50vh;
+            background-color: orange;
+            margin: 50px auto;
+            font-size: 16px;
+        }
+        .container p{font-size: 2em;}
+        .new
+        {
+            box-sizing: border-box;
+            border:2px solid black;
+            width:100vw;
+            background-color:yellow;
+            margin:10px auto;
+            font-size:2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Sizing Units - px, rem, em, vh, vw, % & more</h1>
+    <div class="box1">this is a box with width 250px and margin auto</div><br>
+    <div class="box2">this is a box with width 1920px</div><br>
+    <div class="box3">this is a box with width 100vw(view port width:jitna screen ka size hai utne me khud adjust karega)</div>
+    <div class="container">
+        this is a div with margin 50px auto; and width 100vw  and height 50vh and font size 16px
+        <p>this is a para inside div container with font size 2em--&gt; 2*16px <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit quasi aut accusamus eius minus id aliquam autem? Totam necessitatibus qui exercitationem delectus?</p>
+    </div>
+    <div class="new">
+        this is new div to implement rem....NOTE:the root html tag is set with font size 12px so if this div has size 2rem them it is 2 times the size of root
+    </div>
+    <div class="info">
+        <caption>NOTE FOR :vmin and vmax:</caption>
+        phone me width kam hota hai heigt se toh vmin phone ke liye hoga width
+        pc me height kam hota hai width se toh vmin pc ke liye hoga height
+
+    </div>
+</body>
+</html>

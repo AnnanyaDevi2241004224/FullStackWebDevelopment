@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL</title>
+    <style>
+        body{background-color:yellow;}
+        *{margin: 0; padding: 0;}
+        .box{background-color: aquamarine;}
+        .box1
+        {
+            color:purple; 
+            padding: 10px;
+            margin:90px;
+            border:2px solid black;
+            box-sizing: border-box;
+        }
+        .box2
+        {
+            color:green;
+            padding: 10px;
+            margin:40px;
+            border:2px solid blue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <b>this is div content with class as "box1" and "box"</b>
+    </div>
+    <div class="box box2">
+        <b>this is div content with class as "box2" and "box"</b>
+    </div>
+    <p>box-sizing :border box: content height + padding +border </p>
+</body>
+</html>

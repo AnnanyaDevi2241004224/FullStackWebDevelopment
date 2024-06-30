@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        div{color: blue;}
+        .yellow{background-color:yellow;}
+        #aqua{background-color: aqua;}
+        div > p{background-color: greenyellow;}
+        #div2  p{background-color: deeppink;}
+        *{margin: 10px ; padding: 10px;}
+        a:visited{color:green;}
+        a:link{color: black;}
+        a:hover{background-color: aquamarine;}
+        p:first-child{background-color:pink;}
+    </style>
+</head>
+<body>
+    <h1>CSS SELECTORS </h1>
+    <b>(padding and margin added using universal selector)
+    <div>
+        this is a div content (modified using element selector)
+    </div>
+    <hr>
+    <div class="yellow">
+        this is a div content with class as yellow(modified using class selector)
+    </div>
+    <hr>
+    <div id="aqua">
+        this a div content with id as aqua(modified using id selector )
+    </div>
+    <hr>
+    <div>
+       this is  outer div that has a article and para tag inside 
+        <article>
+            this is inner article tag  which has a para tag inside 
+            <p>this a child para tag of article(this wont be colored using div &gt; p as it is not a direct child)</p>
+        </article>
+        <p>para inside outer div(modified using child selector)</p>
+    </div>
+    <hr>
+    <div id="div2">
+        this is  outer div2 with id div2 that has a article and para tag inside 
+         <article>
+             this is inner article tag  which has a para tag inside 
+             <p>this a child para tag of article(this will be colored )</p>
+         </article>
+         <p>para inside outer div(modified using child selector)</p>
+     </div>
+     <a href="https://www.googlechrome.com">go to google</a><br>
+     (on visited it link will be green and initially black and this is done using pseudo selector )
+     <br>
+     <div class="one">
+        this is div content with class as one
+        <p>this is p inside one as the 1st child so it will colored using p:first-child{background-color:pink;}
+            <br> jis jis ka p 1st child hoga woh pink hoga
+        </p>
+        <p>2nd para tag here</p>
+     </div>
+</body>
+</html>
