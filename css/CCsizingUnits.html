@@ -32,12 +32,13 @@
         {
             box-sizing: border-box;
             border:2px solid black;
-            width:100vw; height: 50vh;
+            width:100vw; height: 60vh;
+            min-height: 50vh;
             background-color: orange;
             margin: 50px auto;
             font-size: 16px;
         }
-        .container p{font-size: 2em;}
+        .container p{font-size: 2em; width: 50%;}
         .new
         {
             box-sizing: border-box;
@@ -46,6 +47,12 @@
             background-color:yellow;
             margin:10px auto;
             font-size:2rem;
+        }
+        .info
+        {
+            background-color: red;
+            font-size: 22px;
+            width: 100vmax;
         }
     </style>
 </head>
@@ -56,7 +63,9 @@
     <div class="box3">this is a box with width 100vw(view port width:jitna screen ka size hai utne me khud adjust karega)</div>
     <div class="container">
         this is a div with margin 50px auto; and width 100vw  and height 50vh and font size 16px
-        <p>this is a para inside div container with font size 2em--&gt; 2*16px <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit quasi aut accusamus eius minus id aliquam autem? Totam necessitatibus qui exercitationem delectus?</p>
+        <p>this is a para inside div container with font size 2em--&gt; 2*16px <br>
+            and width 50% thai is 50% of parent's width
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit quasi aut accusamus eius minus id aliquam autem? Totam necessitatibus qui exercitationem delectus?</p>
     </div>
     <div class="new">
         this is new div to implement rem....NOTE:the root html tag is set with font size 12px so if this div has size 2rem them it is 2 times the size of root

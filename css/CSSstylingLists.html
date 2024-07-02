@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists Using CSS</title>
+    <style>
+        * {
+            font-weight: bold;
+        }
+
+        #nav1 ul li {
+            list-style-position: inside;
+            list-style-type: "💙";
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        #nav2 ul li {
+            list-style: none;
+            background-color: greenyellow;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #nav2 ul {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Styling Lists Using CSS</h1>
+    <nav id="nav1">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li>BIBLIOGRAPHY</li>
+        </ul>
+    </nav>
+    <nav id="nav2">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li>BIBLIOGRAPHY</li>
+        </ul>
+    </nav>
+
+
+</body>
+
+</html>

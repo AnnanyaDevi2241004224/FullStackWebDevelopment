@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MEDIA QUERIES</title>
+    <style>
+        body{background-color: red;}
+        @media only  screen and (max-width:455px) {
+            body{background-color: blue;}
+            .boxes{flex-direction: column;}
+            
+        }
+        @media screen and (orientation:portrait)
+        {
+            .boxes{background-color: palevioletred;}
+        }
+        .box{ 
+            width: 200px;
+            height:100px;
+            border:2px solid black;
+            padding:20px;
+            margin:15px;
+        }
+        .boxes{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS MEDIA QUERIES</h1>
+    <div class ="boxes">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+        <div class="box">BOX 4</div>
+    </div>
+
+</body>
+</html>

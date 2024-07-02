@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE ON CSS SELECTORS</title>
+    <style>
+        .box:first-child{background-color: red;} 
+         .box::first-line{
+            background-color: yellow;
+        } 
+         .boxes *{background-color: aquamarine;
+        border: 2px solid black;}
+        [data-color="primary"]{padding-top:18px ;}
+        p,a, .box:first-child, [data-color="primary"]{padding:28px ;} 
+        .boxes :nth-child(even){color: rgb(236, 45, 201);}
+        .boxes::before{content: "VIRAT IS THE GOAT";}
+        .boxes::after{content: "VIRAT IS THE GOAT";}
+        ::selection{background-color: black; color:aqua;}
+
+    </style>
+
+</head>
+<body>
+    <h1>MORE ON CSS SELECTORS</h1>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey, I am  a Box</div>
+        <div class="box">Hey, I am  a Box</div>
+        <div class="box">Hey, I am  a Box</div>
+    </div>
+    <p data-color="primary">this a par</p>
+</body>
+</html>
