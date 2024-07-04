@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: yellow;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+            transition-duration: 3s;
+            transition-property: background-color,transform;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+        }
+
+        .translate {
+            transform: translatex(10vw) translatey(10vh) scale(1.8);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+
+</html>

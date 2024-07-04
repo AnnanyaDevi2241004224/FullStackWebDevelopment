@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRANSFORMS</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            height: 80vh;
+            width: 100vw;
+            border: 2px solid red;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .box1{transform: rotate(40deg);}        
+        .box2{transform: rotate(00.25turn);}        
+        .box3{transform: rotatex(40deg);}        
+        .box4{transform: rotatey(40deg);}        
+        .box5{transform: rotatez(40deg);}        
+        .box5{transform: rotate3d(90deg);}
+        .box6{transform: scale(1.5);}        
+        .box7{transform: scalex(1.5);}        
+        .box8{transform: scaley(1.5);}        
+        .box9{transform: scalez(1.5);}        
+        .box10{transform: skew(40deg);}        
+        .box11{transform: skewx(40deg);}        
+        .box12{transform: skewy(40deg);}        
+        .box13{transform: skewz(40deg);}  
+        .box14{transform: translate(40%);}      
+        .box15{transform: translatex(40%);}      
+        .box16{transform: translatey(40%);}      
+        .box17{transform: translatez(40%);}      
+        .box18{transform: translate(40%) skew(40deg);}    
+        .box19{transform: rotate(45deg);}        
+        .box20{transform: rotate(45deg);}   
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+            box1 rotated 40deg
+        </div>
+        <div class="box box2">box2 rotated 0.25turn</div>
+        <div class="box box3">box3 rotated in x-axis(40deg)</div>
+        <div class="box box4">box4 rotated in y-axis(40deg)</div>
+        <div class="box box5">box5 rotated in z-axis(40deg)</div>
+        <div class="box box6">box6 has scale 1.5</div>
+        <div class="box box7">box7 has scalex 1.5</div>
+        <div class="box box8">box8 has scaley 1.5</div>
+        <div class="box box9">box9 has scalez 1.5</div>
+        <div class="box box10">box10 has skew 40deg</div>
+        <div class="box box11">box11 has skewx 40deg</div>
+        <div class="box box12">box12 has skewy 40deg</div>
+        <div class="box box13">box13 :skewz cannaot be applied</div>
+        <div class="box box14">box14 has translate 40% </div>
+        <div class="box box15">box15 has translatex 40% </div>
+        <div class="box box16">box16 has translatey 40% </div>
+        <div class="box box17">box17 has translatez 40% </div>
+        <div class="box box18">box18 has translate 40% and skew 40deg</div>
+        <div class="box box19">box19 roatated 45deg</div>
+        <div class="box box20">box20 roatated 45deg</div>
+    </div>
+
+</body>
+
+</html>
