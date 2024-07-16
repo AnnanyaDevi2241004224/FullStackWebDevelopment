@@ -1,0 +1,12 @@
+let d=new Date();
+console.log(d);
+console.log(d.toString());
+console.log(d.toLocaleString());
+console.log(d.toDateString());
+let myd=new Date(2018,18,3);
+console.log(myd);
+console.log(myd.toDateString());
+console.log(d);
+console.log(d.getMonth());
+console.log(d.getDay());
+console.log();
