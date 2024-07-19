@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .childContainer {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .container {
+            background-color: rgb(227, 227, 28);
+            padding: 14px;
+            margin: 14px;
+        }
+    </style>
+    <style>
+        #myDIV {
+            background-color: coral;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h2>The removeEventListener() Method</h2>
+
+    <div id="myDIV">This orange element has an onmousemove event handler that displays a random number when you move the
+        mouse inside.
+        <p>Click "Remove" to remove the event handler.</p>
+        <button onclick="removeHandler()">Remove</button>
+    </div>
+
+    <p id="demo"></p>
+    <br>
+    <hr>
+    <br>
+    <h2>The setInterval() and clearInterval() Methods</h2>
+
+    <p id="demo1"></p>
+
+    <button onclick="myStop()">Stop the time</button>
+    <br>
+    <hr>
+    <br>
+    <h2>The clearTimeout() Method</h2>
+
+    <p>Click the button to prevent the timeout to execute. (You have 3 seconds).</p>
+    
+    <h2 id="demo2"></h2>
+    
+    <button onclick="myStopFunction()">Stop it</button>
+    <script>
+        const myDiv = document.getElementById("myDIV");
+        myDiv.addEventListener("mousemove", myFunction);
+
+        function removeHandler() {
+            myDiv.removeEventListener("mousemove", myFunction);
+        }
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = Math.random();
+        }
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Child Was clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("childContainer Was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            alert("container Was clicked")
+        })
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+        let a = setInterval(() => {
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 1000);
+        console.log(a);
+        //  let a1 = setTimeout(() => {
+        //     document.querySelector(".childContainer").style.background = getRandomColor();
+        // }, 5000);
+
+        // console.log(a1)
+        clearInterval();
+        const myInterval = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            const date = new Date();
+            document.getElementById("demo1").innerHTML = date.toLocaleTimeString();
+        }
+
+        function myStop() {
+            clearInterval(myInterval);
+        }
+        const myTimeout = setTimeout(myGreeting, 3000);
+
+function myGreeting() {
+  document.getElementById("demo2").innerHTML = "Happy Birthday!"
+}
+
+function myStopFunction() {
+  clearTimeout(myTimeout);
+}
+    </script>
+</body>
+
+</html>
