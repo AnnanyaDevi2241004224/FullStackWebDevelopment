@@ -68,9 +68,9 @@
     <h2>The clearTimeout() Method</h2>
 
     <p>Click the button to prevent the timeout to execute. (You have 3 seconds).</p>
-    
+
     <h2 id="demo2"></h2>
-    
+
     <button onclick="myStopFunction()">Stop it</button>
     <script>
         const myDiv = document.getElementById("myDIV");
@@ -124,13 +124,13 @@
         }
         const myTimeout = setTimeout(myGreeting, 3000);
 
-function myGreeting() {
-  document.getElementById("demo2").innerHTML = "Happy Birthday!"
-}
+        function myGreeting() {
+            document.getElementById("demo2").innerHTML = "Happy Birthday!"
+        }
 
-function myStopFunction() {
-  clearTimeout(myTimeout);
-}
+        function myStopFunction() {
+            clearTimeout(myTimeout);
+        }
     </script>
 </body>
 

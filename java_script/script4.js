@@ -19,10 +19,10 @@ btn.addEventListener("dblclick", () => {
 
 const password = document.querySelector('input[type="password"]');
 password.addEventListener("focus", (e) => {
-  event.target.style.background = "pink";
+  e.target.style.background = "pink";
 });
 password.addEventListener("blur", (e) => {
-  event.target.style.background = "aqua";
+  e.target.style.background = "aqua";
 });
 document.addEventListener("keydown",(e)=>
 {
