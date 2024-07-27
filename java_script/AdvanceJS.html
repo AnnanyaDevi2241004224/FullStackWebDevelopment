@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JS</title>
+</head>
+
+<body>
+    Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they
+    are defined. They are typically used to create a local scope for variables to prevent them from polluting the global
+    scope.
+    <hr>Use Cases Of IIFE
+    <br>Avoid polluting the global namespace.
+    <br>To create closures in JavaScript.
+    <br>IIFE is used to create private and public variables and methods.
+    <br>It is used to execute the async and await function.
+    <br>It is used to work with require function.
+    <hr>We may have an array or object that we are working with, but we only need some of the items contained in these.
+    Destructuring makes it easy to extract only what is needed.
+    Destructuring assignment is used to unpack values from an array or properties fromobjects, into distinct variables.
+    <hr>
+    JS has 3 types of scopes:
+    <br>block scope <br>local scope <br>function scope
+    <hr>
+    if a var is declared inside a block , it cannot be used outside of it (let , const), it is local
+    <br>
+    if a var is declared outside a block then it is global and cam be used inside a block
+    <br>
+    a var declared inside a function cannot be used outside of it
+    <hr>
+    Hoisting:
+    In JavaScript, a variable can be declared after it has been used.
+    <br>
+    In other words; a variable can be used before it has been declared.
+    <script>
+        console.log(a1);
+        
+
+
+        // IIFE
+        async function sleep() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(18)
+                }, 1000);
+            })
+        }
+
+        // Error :await can only be used inside async function
+        // let a=await sleep();
+        // let b=await sleep();
+        // console.log(a,"  ",b);
+
+        (async function main() {
+            let a = await sleep();
+            let b = await sleep();
+            console.log(a, "  ", b);
+        })();
+
+        // destructuring
+
+        //1st undefined .... next is array
+        // let x,y=[1,2];
+        // console.log(x," ",y);
+
+        let [x, y] = [1, 2];
+        console.log(x, y);// 1 2
+
+        [x, y] = [18, 9, 0]
+        console.log(x, y);// 18 9
+
+        [x, y, ...rest] = [1, 2, 3, 4, 5, 6];
+        console.log(x, y, rest);//1  2  (4) [3, 4, 5, 6]
+        let obj = {
+            a: 1, b: 2, c: 3,
+        }
+        let { a, b } = obj;
+        console.log(a, b);
+
+        // spread operator
+        function sum(a, b, c) {
+            return (a + b + c);
+        }
+        let arr = [1, 2, 3, 4];
+        console.log(sum(arr[0], arr[1], arr[2]));
+        console.log(sum(...arr));
+
+        //maps index with with number
+        let obj1 = {
+            ...arr
+        }
+        console.log(obj1);
+
+        const p = "virat", q = "kohli";
+        const r = { p, q } //{p: 'virat', q: 'kohli'}
+        console.log(r);
+
+        // hoisting 
+        // see the top clog(a1)
+        // let a1=2; --------------> reference error
+        // const a1=18;-----------------> error
+        var a1=18;//----------->undefined (sirf declaration upar jayega...... value nahi)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

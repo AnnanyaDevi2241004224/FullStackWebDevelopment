@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    try catch works synchronously. if an error happens in scheduled code like set time out then try -catch fails to
+    catch it
+    <br>
+    script dies out and catch will not works
+    <br>
+    because the funcion is execeuted later when the engine has already left the try-catch
+    <br>
+
+    <script>
+        let a = prompt("Enter first number:");// promt string deta hai
+        let b = prompt("Enter second number:");
+
+        //custom error 
+        if (isNaN(a) || isNaN(b)) {
+            throw new Error("this is not allowed")
+        }
+        // let sum = Number(a) + Number(b); 
+        let sum = parseInt(a) + parseInt(b);
+        // let sum = a + b;
+        console.log(`sum= ${sum}`);
+
+        //try catch
+        try {
+            console.log(`sum= ${sum * x}`);
+
+        } catch (error) {
+            console.log('error hai yahan');
+
+        }
+
+        //error object
+        try {
+            hey;
+        } catch (error) {
+            console.log("name=", error.name);
+            console.log("message=", error.message);
+            console.log("stack=", error.stack);
+
+            //output
+            //name= ReferenceError
+            // messgae hey is not defined
+            // stack= ReferenceError: hey is not defined at file:///C:/Users/Lenovo/coding/web_development/java_script/ErrorHandling.html:37:13
+        }
+
+
+        function main() {
+            let x = 1;
+            try {
+                console.log(`sum= ${sum * x}`);
+                return true;
+
+
+            } catch (error) {
+                console.log('error hai ');
+                return false;
+            }
+            // return ke bad finally chalta hai
+            // agar sirf bina finally ke rehta toh na chalta
+            finally {
+                console.log('all opened files and closed');
+
+            }
+
+        }
+        let c = main();
+        console.log('==>', c);
+
+
+
+    </script>
+</body>
+
+</html>
