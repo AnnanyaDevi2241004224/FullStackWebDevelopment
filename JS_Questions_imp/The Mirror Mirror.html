@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mirror Mirror</title>
+</head>
+<body>
+    <h1>The Mirror Mirror</h1>
+    <hr>
+    <b>
+        <h2>Problem Statement:</h2>
+
+        <hr>
+        <hr>
+        <p style="font-size: 25px;">
+            Imagine you have a string, and you need to create a new string that is a mirror image of the original.
+            <br> Write a function that appends the reversed version of the original string to itself.
+
+        </p>
+    </b>
+    <script>
+        let str=prompt("enter the string :");
+        let newStr="";
+        for (let index = str.length-1; index >=0; index--) {
+            newStr=newStr+str[index];            
+        }
+        console.log(`Reverse is: ${newStr}`);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Double Trouble</title>
+</head>
+
+<body>
+    <h1>The Double Trouble</h1>
+    <hr>
+    <b>
+        <h2>Problem Statement:</h2>
+
+        <hr>
+        <hr>
+        <p style="font-size: 25px;">
+            You are tasked with writing a function that doubles each element in an array.
+            <br> However, there's a catch: if the array contains consecutive duplicate elements,
+            <br> only double one of them.
+
+        </p>
+    </b>
+    <script>
+        function doubleElements(arr) {
+            if (arr.length === 0) {
+                return [];
+            }
+
+            let doubledArr = [arr[0] * 2];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] === arr[i - 1]) {
+                    doubledArr.push(arr[i]);
+                } else {
+                    doubledArr.push(arr[i] * 2);
+                }
+            }
+
+            return doubledArr;
+        }
+
+        // Example usage
+        const arr = [1, 2, 2, 3, 3, 3, 4];
+        const result = doubleElements(arr);
+        console.log(result);  // Output: [2, 4, 2, 6, 3, 3, 8]
+
+    </script>
+</body>
+
+</html>

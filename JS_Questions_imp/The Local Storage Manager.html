@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local Storage Manager</title>
+</head>
+<body>
+    <h1>The Local Storage Manager</h1>
+    <hr>
+    <b>
+        <h2>Problem Statement:</h2>
+
+        <hr>
+        <hr>
+        <p style="font-size: 25px;">
+            You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage 
+            <br>that takes a note object and saves it to the browser's local storage.
+        </p>
+        <div class="note">
+
+        </div>
+        <button> ADD NOTE </button>
+    </b>
+    <script>
+         function saveNoteToLocalStorage(note) {
+            localStorage.setItem("note", note);
+        }
+
+        let note = localStorage.getItem("note")
+        if(note){
+            document.querySelector(".note").innerHTML = note
+        }
+        
+        document.querySelector("button").addEventListener("click", () => {
+            let note = prompt("Enter your note")
+            saveNoteToLocalStorage(note)
+            document.querySelector(".note").innerHTML = note
+        })
+
+    </script> 
+</body>
+</html>
