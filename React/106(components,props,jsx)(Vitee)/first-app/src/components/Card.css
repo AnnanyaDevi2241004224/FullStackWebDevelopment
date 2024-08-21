@@ -1,0 +1,10 @@
+.card{
+    width: 20vw;
+    border: 2px solid black;
+    outline: 2px solid black;
+    outline-offset: 2px;
+    margin: 20px;
+    padding: 5px;
+    height: 180px;
+
+}

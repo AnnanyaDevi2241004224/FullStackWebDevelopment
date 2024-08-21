@@ -1,0 +1,9 @@
+.footer{
+    text-align: center;
+    background-color: rgb(43, 42, 42);
+    color: aliceblue;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  
+}
